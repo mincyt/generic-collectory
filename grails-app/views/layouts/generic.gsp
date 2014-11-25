@@ -4,11 +4,15 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%--
+    <alatag:addApplicationMetaTags />
+    --%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     %{--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">--}%
 
     <title><g:layoutTitle /></title>
-    <r:require modules="collectory" />
+    <g:render template="/layouts/global"/>
+    <r:require modules="jquery, jquery_i18n, application, collectory" />
     <style type="text/css">
     body {
         background-color: #ffffff !important;
@@ -34,7 +38,6 @@
     body > #main-content {
         margin-top: 0px;
     }
-
     </style>
     <r:script disposition='head'>
         // initialise plugins
@@ -81,7 +84,6 @@
                     $(this).find("span").html("Desktop");
                 }
             });
-
             $('.helphover').popover({animation: true, trigger:'hover'});
         });
     </r:script>
@@ -112,12 +114,9 @@
         </div><!--/.container-fluid -->
     </div><!--/.navbar-inner -->
 </div><!--/.navbar -->
-
-
 <div class="${fluidLayout?'container-fluid':'container'}" id="main-content">
     <g:layoutBody />
 </div><!--/.container-->
-
 <div id="footer">
     <div class="container-fluid">
         <div class="row-fluid">
@@ -128,7 +127,6 @@
     </div>
 </div><!--/#footer -->
 <br/>
-
 <!-- JS resources-->
 <r:layoutResources/>
 </body>

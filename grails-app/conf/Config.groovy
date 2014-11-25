@@ -37,6 +37,8 @@ if (!skin.headerUrl) {
 if (!skin.footerUrl) {
     skin.footerUrl = "classpath:resources/generic-footer.jsp" // can be external URL
 }
+skin.fluidLayout=false
+
 /******************************************************************************\
 *  EXTERNAL SERVERS
 \******************************************************************************/
@@ -72,7 +74,7 @@ if(!alertResourceName){
     alertResourceName = "Atlas"
 }
 if(!uploadFilePath){
-    uploadFilePath = "/data/collectory/upload/"
+    uploadFilePath = "/data/generic-collectory/upload/"
 }
 if(!uploadExternalUrlPath){
     uploadExternalUrlPath = "/upload/"
@@ -190,7 +192,7 @@ grails.validateable.packages = ['au.org.ala.collectory']
 
 /******* location of images **********/
 // default location for images
-repository.location.images = '/data/collectory-app/data'
+repository.location.images = '/data/generic-collectory/data'
 
 
 disableOverviewMap=false
