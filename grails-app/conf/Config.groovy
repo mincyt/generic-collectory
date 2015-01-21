@@ -179,6 +179,8 @@ grails.views.gsp.sitemesh.preprocess = true
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
 
+grails.plugins.cookie.cookieage.default = 86400 // if not specified default in code is 30 days
+
 // Set to false to use the new Grails 1.2 JSONBuilder in the render method
 grails.json.legacy.builder=false
 // enabled native2ascii conversion of i18n properties files
@@ -235,17 +237,47 @@ environments {
     }
 }
 
-// log4j configuration
+logging.dir = (System.getProperty('catalina.base') ? System.getProperty('catalina.base') + '/logs'  : '/var/log/tomcat6')
+
 log4j = {
-    error  'org.codehaus.groovy.grails.web.servlet',        // controllers
-           'org.codehaus.groovy.grails.web.pages',          // GSP
-           'org.codehaus.groovy.grails.web.sitemesh',       // layouts
-           'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
-           'org.codehaus.groovy.grails.web.mapping',        // URL mapping
-           'org.codehaus.groovy.grails.commons',            // core / classloading
-           'org.codehaus.groovy.grails.plugins',            // plugins
-           'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
-           'org.springframework',
-           'org.hibernate',
-           'net.sf.ehcache.hibernate'
+    appenders {
+        environments {
+            production {
+                console name: "stdout", layout: pattern(conversionPattern: "%d %-5p [%c{1}]  %m%n"), threshold: org.apache.log4j.Level.INFO
+                //rollingFile name: "tomcatLog", maxFileSize: 102400000, file: logging.dir + "/ala-collectory.log", threshold: org.apache.log4j.Level.ERROR, layout: pattern(conversionPattern: "%d %-5p [%c{1}] %m%n")
+                //console name: "stdout", layout: pattern(conversionPattern: "%d %-5p [%c{1}]  %m%n"), threshold: org.apache.log4j.Level.WARN
+            }
+            development {
+                console name: "stdout", layout: pattern(conversionPattern: "%d %-5p [%c{1}]  %m%n"), threshold: org.apache.log4j.Level.DEBUG
+            }
+            test {
+                console name: "stdout", layout: pattern(conversionPattern: "%d %-5p [%c{1}]  %m%n"), threshold: org.apache.log4j.Level.INFO
+            }
+        }
+    }
+
+    root {
+        // change the root logger to my tomcatLog file
+        error 'tomcatLog'
+        warn 'tomcatLog'
+        additivity = true
+    }
+
+    error   'org.codehaus.groovy.grails.web.servlet',        // controllers
+            'org.codehaus.groovy.grails.web.pages',          // GSP
+            'org.codehaus.groovy.grails.web.sitemesh',       // layouts
+            'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
+            'org.codehaus.groovy.grails.web.mapping',        // URL mapping
+            'org.codehaus.groovy.grails.commons',            // core / classloading
+            'org.codehaus.groovy.grails.plugins',            // plugins
+            'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
+            'org.springframework',
+            'org.hibernate',
+            'net.sf.ehcache.hibernate'
+    info    'grails.app'
+    debug   'grails.app',
+            'grails.app.services',
+            //'grails.app.taglib',
+            'au.org.ala.cas',
+            'au.org.ala.biocache.hubs'
 }

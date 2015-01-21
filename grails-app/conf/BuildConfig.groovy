@@ -6,14 +6,14 @@ grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 
-grails.plugin.location.'collectory-plugin' = "../collectory-plugin"
-
 grails.project.fork = [
     test:   false,
     run:    false,
         console:    false,
         war:        false
 ]
+
+grails.project.dependency.resolver = "maven"
 
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
@@ -24,15 +24,10 @@ grails.project.dependency.resolution = {
     legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
-        inherits true // Whether to inherit repository definitions from plugins
-
-        grailsPlugins()
-        grailsHome()
         mavenLocal()
-        grailsCentral()
-        mavenCentral()
-        mavenRepo "http://repository.codehaus.org"
-        mavenRepo "http://maven.ala.org.au/repository/"
+        mavenRepo("http://nexus.ala.org.au/content/groups/public/") {
+            updatePolicy 'always'
+        }
     }
 
     dependencies {
@@ -50,6 +45,7 @@ grails.project.dependency.resolution = {
         runtime ":audit-logging:0.5.5.3"
         compile ":cache-headers:1.1.6"
         runtime ":richui:0.8"
+        runtime ":collectory:1.0-SNAPSHOT"
         runtime ":tiny-mce:3.4.4"
     }
 }
