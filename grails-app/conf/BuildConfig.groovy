@@ -35,6 +35,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
+        build ":release:3.0.1"
         build ":tomcat:7.0.52.1"
 
         compile ":marshallers:0.6"          //for customized domain object marshalling with json
