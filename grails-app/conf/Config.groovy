@@ -1,5 +1,7 @@
 grails.project.groupId = "au.org.ala" // change this to alter the default package name and Maven publishing destination
 
+grails.appName = "${appName}"
+
 default_config = "/data/${appName}/config/${appName}-config.properties"
 if(!grails.config.locations || !(grails.config.locations instanceof List)) {
     grails.config.locations = []
@@ -17,9 +19,9 @@ println "default_config = ${default_config}"
 /******************************************************************************\
 *  SKINNING
 \******************************************************************************/
-if (!ala.skin) {
-    //ala.skin = 'ala2'
-    ala.skin = 'generic'
+if (!skin.layout) {
+    //skin.layout = 'ala2'
+    skin.layout = 'generic'
 }
 if (!skin.orgNameLong) {
     skin.orgNameLong = "Atlas of Living Australia"
@@ -74,7 +76,7 @@ if(!alertResourceName){
     alertResourceName = "Atlas"
 }
 if(!uploadFilePath){
-    uploadFilePath = "/data/generic-collectory/upload/"
+    uploadFilePath = "/data/${appName}/upload/"
 }
 if(!uploadExternalUrlPath){
     uploadExternalUrlPath = "/upload/"
@@ -168,7 +170,7 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
 
 // What URL patterns should be processed by the resources plugin
 //grails.resources.uri.prefix = ''
-grails.resources.adhoc.patterns = ['/images/*', '/data/*', '/css/*', '/js/*', '/plugins/*']
+grails.resources.adhoc.patterns = ['/img/**', '/images/*', '/data/*', '/css/*', '/js/**', '/plugins/**']
 
 // The default codec used to encode data with ${}
 grails.views.default.codec="html" // none, html, base64
@@ -194,7 +196,7 @@ grails.validateable.packages = ['au.org.ala.collectory']
 
 /******* location of images **********/
 // default location for images
-repository.location.images = '/data/generic-collectory/data'
+repository.location.images = "/data/${appName}/data"
 
 
 disableOverviewMap=false
@@ -281,3 +283,26 @@ log4j = {
             'au.org.ala.cas',
             'au.org.ala.biocache.hubs'
 }
+// Uncomment and edit the following lines to start using Grails encoding & escaping improvements
+
+/* remove this line 
+// GSP settings
+grails {
+    views {
+        gsp {
+            encoding = 'UTF-8'
+            htmlcodec = 'xml' // use xml escaping instead of HTML4 escaping
+            codecs {
+                expression = 'html' // escapes values inside null
+                scriptlet = 'none' // escapes output from scriptlets in GSPs
+                taglib = 'none' // escapes output from taglibs
+                staticparts = 'none' // escapes output from static template parts
+            }
+        }
+        // escapes all not-encoded output at final stage of outputting
+        filteringCodecForContentType {
+            //'text/html' = 'html'
+        }
+    }
+}
+remove this line */
