@@ -37,6 +37,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
+        build ":release:3.0.1"
         runtime ":collectory:1.0"
     }
 }
