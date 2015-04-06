@@ -277,11 +277,7 @@ log4j = {
             'org.hibernate',
             'net.sf.ehcache.hibernate'
     info    'grails.app'
-    debug   'grails.app',
-            'grails.app.services',
-            //'grails.app.taglib',
-            'au.org.ala.cas',
-            'au.org.ala.biocache.hubs'
+    debug   'au.org.ala.collectory'
 }
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
 
