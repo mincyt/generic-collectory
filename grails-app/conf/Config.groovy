@@ -235,7 +235,6 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
 
@@ -245,9 +244,7 @@ log4j = {
     appenders {
         environments {
             production {
-                console name: "stdout", layout: pattern(conversionPattern: "%d %-5p [%c{1}]  %m%n"), threshold: org.apache.log4j.Level.INFO
-                //rollingFile name: "tomcatLog", maxFileSize: 102400000, file: logging.dir + "/ala-collectory.log", threshold: org.apache.log4j.Level.ERROR, layout: pattern(conversionPattern: "%d %-5p [%c{1}] %m%n")
-                //console name: "stdout", layout: pattern(conversionPattern: "%d %-5p [%c{1}]  %m%n"), threshold: org.apache.log4j.Level.WARN
+                rollingFile name: "tomcatLog", maxFileSize: 102400000, file: logging.dir + "/${appName}.log", threshold: org.apache.log4j.Level.INFO, layout: pattern(conversionPattern: "%d %-5p [%c{1}] %m%n")
             }
             development {
                 console name: "stdout", layout: pattern(conversionPattern: "%d %-5p [%c{1}]  %m%n"), threshold: org.apache.log4j.Level.DEBUG
@@ -275,9 +272,14 @@ log4j = {
             'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
             'org.springframework',
             'org.hibernate',
-            'net.sf.ehcache.hibernate'
-    info    'grails.app'
-    debug   'au.org.ala.collectory'
+            'net.sf.ehcache.hibernate',
+            'grails.app.service.org.grails.plugin.resource.ResourceTagLib',
+            'grails.app.services.org.grails.plugin.resource',
+            'grails.app.taglib.org.grails.plugin.resource',
+            'grails.app.resourceMappers.org.grails.plugin.resource'
+    debug   'au.org.ala.collectory',
+            'grails.app',
+            'grails.app.service.org.grails.plugin.au.org.ala'
 }
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
 
