@@ -11,8 +11,8 @@ grails.project.source.level = 1.6
 grails.project.fork = [
     test:   false,
     run:    false,
-        console:    false,
-        war:        false
+    console:    false,
+    war:        false
 ]
 
 grails.project.dependency.resolver = "maven"
@@ -38,6 +38,7 @@ grails.project.dependency.resolution = {
 
     plugins {
         build ":release:3.0.1"
-        runtime ":collectory:1.2"
+        runtime ":collectory:1.3.2"
+        build ":tomcat:7.0.54"
     }
 }
