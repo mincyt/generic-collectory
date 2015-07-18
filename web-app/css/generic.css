@@ -1,6 +1,50 @@
-
+body {
+    background-color: #ffffff !important;
+}
+#breadcrumb {
+    margin-top: 10px;
+}
+#footer {
+    margin: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #CCC;
+    font-size: 12px;
+}
+#content .nav-tabs > li.active > a {
+    background-color: #ffffff;
+}
+.nav {
+    margin-top: 20px;
+}
 
 #main-content #customiseFacetsButton > .dropdown-menu,
 #main-content #resultsReturned .dropdown-menu {
     background-color: #fff;
 }
+
+/* centra el div principal y lo ajusta al ancho del header*/
+#main-content {
+  margin: auto;
+  width : 990px;
+}
+
+/* logo del SNDB */
+#mincyt_header {
+  height: 180px;
+  width: 990px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+   
+/* pie de página del SNDB */
+#pie {
+  text-align: center;
+  height: 50px;
+  background-image: url(../images/footer.jpg);
+  width: 990px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
