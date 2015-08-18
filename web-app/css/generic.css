@@ -48,3 +48,151 @@ body {
   margin-left: auto;
 }
 
+/* estilos sndb */
+h1 {
+	font-family: Calibri;
+	font-size: 24px;
+	font-weight: bold;
+	color: #105C99;
+	text-decoration: none;
+	line-height: 24px;
+	text-align: left;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+h2 {
+	font-family: Calibri;
+	font-size: 18px;
+	font-weight: bold;
+	color: #105C99;
+	text-decoration: none;
+	text-align: left;
+	line-height: 18px;
+}
+
+h3 { 
+	color:#093c67;
+	font: bold 14px Calibri; 
+	margin: 0 0 3px 0;
+}
+
+h3 a:link{
+	color: #093c67;
+	text-decoration: none;
+}
+
+h3 a:hover{
+	text-decoration: underline;
+}
+
+h3 a:visited{
+	color: #093c67;
+}
+
+h4 {
+	color: #105C99;
+	text-transform: uppercase;
+	padding: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-top-color: #3C6A9C;
+	border-bottom-color: #3C6A9C;
+	border-top-style: none;
+	font-family: Calibri;
+	font-size: 14px;
+	line-height: 26px;
+	margin-bottom: 10px;
+}
+
+h5 {
+	font-family: Calibri;
+	font-size: 16px;
+	font-weight: bold;
+	color: #0077A4;
+	line-height: 28px;
+}
+
+h5 a:link{
+	color: #0077A4;	
+	text-decoration: none;
+}
+
+h5 a:visited{
+	color: #999999;
+}
+
+h5 a:hover{
+	color: #0077A4;
+	text-decoration: underline;
+}
+.texto-home{
+	font-family:Calibri;
+	font-size: 12px;
+	color: #4D4D4D;
+}
+
+hr {
+	width: 600;
+	noshade: noshade;
+	background-color: #105C99;
+	margin-top: 10px;
+	height: 2px;
+}
+
+bullet  {
+	margin-left: 10px;
+	list-style-position: inside;
+	list-style-type: circle;
+	text-indent: 10px;
+	list-style-image: url(../images/bola.gif);
+}
+
+p a:link{
+	color: #00B1A6;
+	text-decoration: none;
+}
+
+p a:visited{
+	color: #00B1A6;
+}
+
+p a:hover{
+	color: #00B1A6;
+	text-decoration: underline;
+}
+
+p2 {
+	font-family: Calibri;
+	font-size: 18px;
+	font-weight: bold;
+	color: #0077A4;
+	text-decoration: none;
+}
+
+p2 a:link{
+	color: #0077A4;
+	text-decoration: none;
+}
+
+p2 a:visited{
+	color: #0077A4;
+}
+
+p2 a:hover{
+	color: #999999;
+	text-decoration: underline;
+}
+
+p3 {
+	font-family: Calibri;
+	font-size: 24px;
+	font-weight: bold;
+	color: #0077A4;
+	text-decoration: none;
+}
+p3 a:link{
+	color: #0077A4;
+	text-decoration: none;
+}
