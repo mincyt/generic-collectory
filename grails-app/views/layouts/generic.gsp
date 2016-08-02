@@ -70,18 +70,69 @@
 </head>
 <body class="${pageProperty(name:'body.class')?:'nav-collections'}" id="${pageProperty(name:'body.id')}" onload="${pageProperty(name:'body.onload')}">
 
-	<div id="mincyt_header">
-		<g:img dir="images" file="banner_SNDB.jpg" alt="banner Sistema Nacional de Datos Biologicos" width="990" height="180" border="0" usemap="#Map" />
-		<map name="Map" id="Map">
-		  <area shape="rect" coords="40,51,253,128" href="http://www.mincyt.gob.ar" target="_blank" alt="Ir a Ministerio de Ciencia, Tecnologia e Innovación Productiva">
-		</map>
+<div class="container">
+	<div class="row" >
+		<div class="span2">&nbsp;</div>
+		<div class="span4">
+		
+		  <a href="#"><g:img dir="images" file="logo_portal.png"  alt="Portal del SNDB" /></a>
+		</div>
+		<div class="span4">
+		  <a href="#" class="pull-right"><g:img dir="images" file="logo_datos_biologicos.png" alt="Sistemas Nacionales - Datos Biológicos" /></a>
+		</div>
+		<div class="span2">&nbsp;</div>
 	</div>
+</div>
+<div class="navbar navbar-inverse" >
+	  <div class="navbar-inner" style="padding:0;">
+		<ul class="nav" >
+			<li><a href="/">INICIO</a></li>
+			<li><a href="/generic-hub/occurrences/search?q=*%3A*#tab_mapView">DATOS GEOREFERENCIADOS</a></li>
+			<li><a href="/collectory/datasets">SETS DE DATOS</a></li>
+			<li><a href="/collectory">COLECCIONES</a></li>
+		</ul>
+	  </div>
+</div>
 
     <div class="container" id="main-content">
         <g:layoutBody />
     </div><!--/.container-->
 
-	<div id="pie"></div><!--/#footer -->
+	<div id="footer">
+		<div id="footer_logos" class="container-fluid" >
+			<div class="container text-center" style="padding-top:20px;">
+				  <a href="#"><g:img dir="images" file="logo_mincyt.png" alt="Ministerio de Ciencia, Tecnología e Innovación Productiva" /></a>
+				  <a href="#"><g:img dir="images" file="logo_crowdin.png" alt="Crowdin" /></a>
+				  <a href="#"><g:img dir="images" file="logo_australia.png" alt="Atlas of living australia" /></a>
+				  <a href="#"><g:img dir="images" file="logo_gbif.png" alt="GBIF.org" /></a>
+				</div>
+			</div>
+		</div>
+		<div id="footer_nav">
+			<div class="container text-center row">
+				<div class="span3" id="disclaimer-box">
+				  <p>Estamos ajustando algunas funcionalidades del portal. Disculpe las molestias que esto pueda ocasionar.</p>
+				  <p>Si observa cualquier incidencia agradeceríamos que nos la comunicase mediante mensaje a sndb@mincyt.gob.ar</p>
+				</div>
+				<div class="span3" id="contact-box">
+				 <p>
+					Godoy Cruz 2320, 2° piso (C1425FQD)<br/>
+					Ciudad Autónoma de Buenos Aires<br/>
+					República Argentina<br/>
+					Tel/Fax.: (54-11) 4899-5000 Int. 2182<br/>
+                                 </p>
+				</div>
+				<div class="span3" id="navigation-box">
+					<ul class="white" >
+						<li><a href="./">INICIO</a></li>
+						<li><a href="/generic-hub/occurrences/search?q=*%3A*#tab_mapView">DATOS GEOREFERENCIADOS</a></li>
+						<li><a href="/collectory/datasets">SETS DE DATOS</a></li>
+						<li><a href="/collectory">COLECCIONES</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <!-- JS resources-->
 <r:layoutResources/>

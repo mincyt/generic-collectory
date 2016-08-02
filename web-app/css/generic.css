@@ -1,6 +1,41 @@
-body {
-    background-color: #ffffff !important;
+@font-face { 
+	font-family: Geogrotesque; 
+	font-weight: 400;
+	src: url('fonts/Geogrotesque/Geo-Rg.otf'); 
 }
+@font-face { 
+	font-family: Geogrotesque; 
+	font-weight: 400;
+	font-style: italic;
+	src: url('fonts/Geogrotesque/Geo-RgIt.otf'); 
+}
+@font-face { 
+	font-family: Geogrotesque; 
+	font-weight: 500;
+	src: url('fonts/Geogrotesque/Geo-Md.otf'); 
+}
+@font-face { 
+	font-family: Geogrotesque; 
+	font-weight: 500;
+	font-style: italic;
+	src: url('fonts/Geogrotesque/Geo-MdIt.otf'); 
+}
+@font-face { 
+	font-family: Geogrotesque; 
+	font-weight: 600;
+	src: url('fonts/Geogrotesque/Geo-Sb.otf'); 
+}
+@font-face { 
+	font-family: Geogrotesque; 
+	font-weight: 600;
+	font-style: italic;
+	src: url('fonts/Geogrotesque/Geo-SbIt.otf'); 
+}
+
+body {
+  font-family: Geogrotesque;
+}
+
 #breadcrumb {
     margin-top: 10px;
 }
@@ -195,5 +230,78 @@ p3 {
 p3 a:link{
 	color: #0077A4;
 	text-decoration: none;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.navbar .navbar-inner {
+    text-align: center;
+}
+.navbar .navbar-inner .nav {
+    float: none;
+    display:inline-block;
+}
+
+#header_logos_row {
+  height:11.8em;
+}
+
+#header_logos {
+  width: 74.875em;
+}
+
+#header_navbar {
+  height: 3.375em;
+  background-color: #000;
+}
+
+#footer_logos {
+  height: 12.5em;
+  background: url("../images/background_logos.png");
+}
+
+#footer_nav {
+  height: 17.0em;
+  background: #008BC0;
+  padding: 1em 1em 1em 1em;
+}
+
+.white, .white a {
+  color: #fff;
+}
+
+
+#disclaimer-box {
+	background-image: url('../images/icono_advertencia.png');
+	background-repeat: no-repeat;
+	background-color:#027BA0;
+	color: #ffffff;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	padding: 1.8em 1.8em 1.8em 1.8em;
+	text-align: justify;
+}
+
+#contact-box {
+	color: #ffffff;
+	font-size: 1.1em;
+	line-height: 1.3em;
+	padding: 1.0em 1.8em 1.0em 1.8em;
+	text-align: justify;
+}
+
+#navigation-box {
+	color: #ffffff;
+	font-size: 1.1em;
+	line-height: 2.5em;
+	padding: 1.8em 1.8em 1.8em 1.8em;
+	text-align: justify;
+}
+
+#navigation-box > ul > li {
+	height: 2.5em;
 }
 
