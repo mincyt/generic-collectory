@@ -87,8 +87,8 @@
 	  <div class="navbar-inner" style="padding:0;">
 		<ul class="nav" >
 			<li><a href="/">INICIO</a></li>
-			<li><a href="/generic-hub/occurrences/search?q=*%3A*#tab_mapView">DATOS GEOREFERENCIADOS</a></li>
-			<li><a href="/collectory/datasets">SETS DE DATOS</a></li>
+			<li><a href="/generic-hub/occurrences/search?q=*%3A*#tab_mapView">DATOS GEORREFERENCIADOS</a></li>
+			<li><a href="/collectory/datasets">CONJUNTOS DE DATOS</a></li>
 			<li><a href="/collectory">COLECCIONES</a></li>
 		</ul>
 	  </div>
@@ -122,14 +122,16 @@
 					Tel/Fax.: (54-11) 4899-5000 Int. 2182<br/>
                                  </p>
 				</div>
-				<div class="span3" id="navigation-box">
-					<ul class="white" >
-						<li><a href="./">INICIO</a></li>
-						<li><a href="/generic-hub/occurrences/search?q=*%3A*#tab_mapView">DATOS GEOREFERENCIADOS</a></li>
-						<li><a href="/collectory/datasets">SETS DE DATOS</a></li>
-						<li><a href="/collectory">COLECCIONES</a></li>
-					</ul>
-				</div>
+                <div class="span3" id="navigation-box">
+                        <ul class="white" >
+                                <li><a href="./">INICIO</a></li>
+                                <li><a href="/generic-hub/occurrences/search?q=*%3A*#tab_mapView">DATOS GEOREFERENCIADOS</a></li>
+                                <li><a href="/collectory/datasets">SETS DE DATOS</a></li>
+                                <li><a href="/collectory">COLECCIONES</a></li>
+                                <li><a href="/feedback.html">FEEDBACK</a></li>
+                                <li><a href="http://datos2010.sndb.mincyt.gob.ar/portal">PORTAL DE DATOS DE 2010</a></li>
+                        </ul>
+                </div>
 			</div>
 		</div>
 	</div>
