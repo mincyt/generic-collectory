@@ -72,11 +72,22 @@ function initMap(mapOptions) {
         controls: [],
         sphericalMercator: true,
         layers: [
+            new OpenLayers.Layer.TMS("IGN TMS",
+                "http://wms.ign.gob.ar/geoserver/gwc/service/tms/",
+                {
+                    layername: "capabaseargenmap@EPSG%3A4326@png",
+                    type: "png",
+                    wrapDateLine: true,
+                    zoomOffset: -1,
+                    isBaseLayer: true
+                }
+            )/*,
                  new OpenLayers.Layer.XYZ("Base layer",
                     "http://${1..4}.basemaps.cartocdn.com/light_all/${z}/${x}/${y}.png", {
                              sphericalMercator: true,
                              wrapDateLine: true
                  })
+*/
         ]
     });
 
